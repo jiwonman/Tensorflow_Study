@@ -21,6 +21,9 @@ print("sess.run(node3) : ", sess.run(node3))
 a = tf.placeholder(tf.float32)          #placeholder라는 노드를 만들 수 있다. (넘겨주는 행위)
 b = tf.placeholder(tf.float32)
 adder_node = a + b
+print(type(a))
+print(type(b))
+print(type(adder_node))
 
 print(sess.run(adder_node, feed_dict = {a: 3, b: 4.5}))         #seesion을 통해 그래프를 실행 시킬 때 feed_dict로 값을 넘겨준다.
 print(sess.run(adder_node, feed_dict = {a: [1,3], b: [2,4]}))
